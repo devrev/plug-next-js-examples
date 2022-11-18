@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Plug-Next-js-example</title>
-        <link rel="icon" href="https://app.devrev.ai/static/profile-circle-black.png" />
+        <title>Plug Next Js Example</title>
+        <link rel="icon" href="./images/profile-circle-black.png" />
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Plug-Next-js-examples
+          Plug Next Js Example
         </h1>
         <Widget/>
       </main>
