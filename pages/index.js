@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Plug Next Js Example</title>
-        <link rel="icon" href="./images/profile-circle-black.png" />
+        <link rel="shortcut icon" href="https://app.devrev.ai/static/profile-circle-black.png"/>
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>

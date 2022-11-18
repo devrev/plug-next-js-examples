@@ -36,7 +36,7 @@ export default function Widget() {
       onLoad={() => {
         setHasWidgetLoaded(true);
       }}
-      //in the following src url "devrev" has to be replaced with your-org-name(org-slug) --"https://plug.devrev.ai/{YOUR_ORG_NAME}/widget.js"  
+      //Replace your org slug to consume the widget.js file -- "https://plug.devrev.ai/{YOUR_ORG_SLUG}/widget.js"
       src="https://plug.devrev.ai/devrev/widget.js"
     ></Script>
   );
