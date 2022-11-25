@@ -13,7 +13,7 @@ You can learn more about the PLuG widget itself in our [Introduction to PLuG Wid
 
 To use this repository, just clone the repository and run `npm install && npm run dev`:
 
-    git clone https://github.com/iaincollins/nextjs-starter.git
+    git clone https://github.com/devrev/plug-next-js-examples.git
     npm install
     npm run dev
 
