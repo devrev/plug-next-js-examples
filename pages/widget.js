@@ -49,7 +49,7 @@ export default function Widget() {
     hasWidgetBeenInjected.current = true;
   },[hasWidgetBeenInjected])
   return (
-   <div></div>
+   <></>
   );
 }
 
