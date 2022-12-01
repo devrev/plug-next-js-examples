@@ -49,13 +49,6 @@ export default function Widget() {
     hasWidgetBeenInjected.current = true;
   },[hasWidgetBeenInjected])
   return (
-   <></>
+   <div>Widget will apper at bottom right</div>
   );
 }
-
-
-
-
-
-
-
