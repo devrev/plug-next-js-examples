@@ -1,8 +1,6 @@
-import Script from 'next/script';
-import { useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 export default function Widget() {
-  const [hasWidgetLoaded, setHasWidgetLoaded] = useState(false);
 
   const config = {
     auth: {
@@ -34,24 +32,20 @@ export default function Widget() {
     },
   };
 
-  const runScript = () => {
-    const widget = new window.Plug(config,callbacks);
-  };
+  const hasWidgetBeenInjected =useRef(false);
 
-  useEffect(() => {
-    if (hasWidgetLoaded) {
-      runScript();
+  useEffect(()=>{
+    if(!hasWidgetBeenInjected.current){
+      const script = document.createElement('script');
+      // Replace your org slug to consume the widget.js file -- "https://plug.devrev.ai/{YOUR_ORG_SLUG}/widget.js" 
+      script.src = "https://plug.devrev.ai/devrev/widget.js";
+      document.body.appendChild(script);
+      script.onload = ()=>{new window.Plug(config,callbacks);};
     }
-  }, [hasWidgetLoaded]);
-
+    hasWidgetBeenInjected.current = true;
+  },[hasWidgetBeenInjected])
   return (
-    <Script
-      onLoad={() => {
-        setHasWidgetLoaded(true);
-      }}
-      //Replace your org slug to consume the widget.js file -- "https://plug.devrev.ai/{YOUR_ORG_SLUG}/widget.js"
-      src="https://plug.devrev.ai/devrev/widget.js"
-    ></Script>
+   <div></div>
   );
 }
 
