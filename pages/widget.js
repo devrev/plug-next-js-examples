@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-
+import React from 'react';
 export default function Widget() {
 
   const config = {
@@ -15,7 +15,6 @@ export default function Widget() {
       alignment: 'right',
       horizontalOffset: "20px",
       verticalOffset: "20px",
-      theme: "dark",
       logo: "https://app.devrev.ai/static/profile-circle-black.png",
     },
   };
